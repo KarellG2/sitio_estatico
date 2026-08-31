@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+{% for item in listaDetalles %}
+<header class="tn-detail-header">
+  <div class="container">
+    <p class="mb-1"><a href="{% url 'servicios' %}" class="text-white-50 text-decoration-none">&larr; Volver a servicios</a></p>
+    <h1>{{ item.nombre }}</h1>
+    <p class="mb-0 fs-5">{{ item.resumen }}</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-8">
+      <h3>Descripción del servicio</h3>
+      <p>{{ item.detalles }}</p>
+      <h4 class="mt-4">Qué incluye</h4>
+      <ul class="tn-feature-list list-unstyled">
+        <li>{{ item.incluye_1 }}</li>
+        <li>{{ item.incluye_2 }}</li>
+        <li>{{ item.incluye_3 }}</li>
+        <li>{{ item.incluye_4 }}</li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <div class="tn-price-box">
+        <p class="text-muted mb-1">Servicio N&deg; 1</p>
+        <p class="tn-price mb-1">Desde {{ item.precio }}</p>
+        <p class="text-muted">Plazo estimado: {{ item.plazo }}</p>
+        <a href="{% url 'contacto' %}" class="btn btn-primary w-100 mt-2">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

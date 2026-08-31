@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+
+<header class="tn-detail-header">
+  <div class="container">
+    <p class="mb-1"><a href="servicios.html" class="text-white-50 text-decoration-none">&larr; Volver a servicios</a></p>
+    <h1>Aplicaciones Móviles</h1>
+    <p class="mb-0 fs-5">Apps nativas e híbridas para Android e iOS, conectadas a tus sistemas.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-8">
+      <h3>Descripción del servicio</h3>
+      <p>Desarrollamos aplicaciones móviles para Android e iOS conectadas a tus sistemas de backend existentes, pensadas para acompañar a tus clientes desde el celular con la misma calidad que tu plataforma web.</p>
+      <h4 class="mt-4">Qué incluye</h4>
+      <ul class="tn-feature-list list-unstyled">
+        <li>Apps nativas e híbridas (Android / iOS)</li><li>Notificaciones push y geolocalización</li><li>Conexión a API REST propia o de terceros</li><li>Publicación en Google Play y App Store</li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <div class="tn-price-box">
+        <p class="text-muted mb-1">Servicio N&deg; 2</p>
+        <p class="tn-price mb-1">Desde $890.000</p>
+        <p class="text-muted">Plazo estimado: 6 a 10 semanas</p>
+        <a href="{% url 'contacto' %}" class="btn btn-primary w-100 mt-2">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

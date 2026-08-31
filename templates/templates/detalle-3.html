@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block content %}
+
+<header class="tn-detail-header">
+  <div class="container">
+    <p class="mb-1"><a href="servicios.html" class="text-white-50 text-decoration-none">&larr; Volver a servicios</a></p>
+    <h1>Consultoría en la Nube</h1>
+    <p class="mb-0 fs-5">Migración y optimización de infraestructura en la nube para tu empresa.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-8">
+      <h3>Descripción del servicio</h3>
+      <p>Ayudamos a tu empresa a migrar y optimizar su infraestructura en servicios en la nube, reduciendo costos operativos y mejorando la disponibilidad de tus sistemas críticos.</p>
+      <h4 class="mt-4">Qué incluye</h4>
+      <ul class="tn-feature-list list-unstyled">
+        <li>Diagnóstico de infraestructura actual</li><li>Migración de servidores y bases de datos</li><li>Configuración de respaldos automáticos</li><li>Monitoreo y alertas 24/7</li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <div class="tn-price-box">
+        <p class="text-muted mb-1">Servicio N&deg; 3</p>
+        <p class="tn-price mb-1">Desde $600.000</p>
+        <p class="text-muted">Plazo estimado: 2 a 4 semanas</p>
+        <a href="{% url 'contacto' %}" class="btn btn-primary w-100 mt-2">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
