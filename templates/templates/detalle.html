@@ -1,11 +1,11 @@
-{% extends "index.html" %}
+{% extends "template_base.html" %}
 {% block content %}
 
 <header class="tn-detail-header">
   <div class="container">
     <p class="mb-1"><a href="{% url 'servicios' %}" class="text-white-50 text-decoration-none">&larr; Volver a servicios</a></p>
-    <h1>{{ detalle.nombre }}</h1>
-    <p class="mb-0 fs-5">{{ detalle.resumen }}</p>
+    <h1>{{ servicios.nombre }}</h1>
+    <p class="mb-0 fs-5">{{ servicios.resumen }}</p>
   </div>
 </header>
 
@@ -13,19 +13,19 @@
   <div class="row g-5">
     <div class="col-lg-8">
       <h3>Descripción del servicio</h3>
-      <p>{{ detalle.descripcion }}</p>
+      <p>{{ servicios.descripcion }}</p>
       <h4 class="mt-4">Qué incluye</h4>
       <ul class="tn-feature-list list-unstyled">
-        {% for caracteristica in detalle.caracteristicas %}
+        {% for caracteristica in servicios.caracteristicas %}
         <li>{{ caracteristica }}</li>
         {% endfor %}
       </ul>
     </div>
     <div class="col-lg-4">
       <div class="tn-price-box">
-        <p class="text-muted mb-1">Servicio N&deg; {{ detalle.numero_Servicio }}</p>
-        <p class="tn-price mb-1">{{ detalle.precio }}</p>
-        <p class="text-muted">Plazo estimado: {{ detalle.plazo_estimado }}</p>
+        <p class="text-muted mb-1">Servicio N&deg; {{ servicios.id }}</p>
+        <p class="tn-price mb-1">{{ servicios.precio }}</p>
+        <p class="text-muted">Plazo estimado: {{ servicios.plazo_estimado }}</p>
         <a href="{% url 'contacto' %}" class="btn btn-primary w-100 mt-2">Solicitar cotización</a>
       </div>
     </div>
